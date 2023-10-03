@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/uploads/%E7%BE%BD%E6%AF%9B.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/%E7%BE%BD%E6%AF%9B.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/%E7%BE%BD%E6%AF%9B.png">
+  <link rel="mask-icon" href="/uploads/%E7%BE%BD%E6%AF%9B.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"eliaukshe.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="实际上对于语义偏离还是持悲观看法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于语义偏离的一些想法">
+<meta property="og:url" content="https://eliaukshe.github.io/2023/03/31/%E5%85%B3%E4%BA%8E%E8%AF%AD%E4%B9%89%E5%81%8F%E7%A6%BB%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/">
+<meta property="og:site_name" content="羽毛の兜兜转转">
+<meta property="og:description" content="实际上对于语义偏离还是持悲观看法">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-31T15:09:41.000Z">
+<meta property="article:modified_time" content="2023-04-24T14:53:04.000Z">
+<meta property="article:author" content="是羽毛ya">
+<meta property="article:tag" content="文章">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://eliaukshe.github.io/2023/03/31/%E5%85%B3%E4%BA%8E%E8%AF%AD%E4%B9%89%E5%81%8F%E7%A6%BB%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>关于语义偏离的一些想法 | 羽毛の兜兜转转</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="羽毛の兜兜转转" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">羽毛の兜兜转转</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">昔我往矣 杨柳依依</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://eliaukshe.github.io/2023/03/31/%E5%85%B3%E4%BA%8E%E8%AF%AD%E4%B9%89%E5%81%8F%E7%A6%BB%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/zhaoyu.png">
+      <meta itemprop="name" content="是羽毛ya">
+      <meta itemprop="description" content="想记录着世界的过客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="羽毛の兜兜转转">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          关于语义偏离的一些想法
+        </h1>
+
+        <div class="post-meta">
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-03-31 23:09:41" itemprop="dateCreated datePublished" datetime="2023-03-31T23:09:41+08:00">2023-03-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-04-24 22:53:04" itemprop="dateModified" datetime="2023-04-24T22:53:04+08:00">2023-04-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%96%87%E7%AB%A0/" itemprop="url" rel="index"><span itemprop="name">文章</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%96%87%E7%AB%A0/2023/" itemprop="url" rel="index"><span itemprop="name">2023</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <div class="post-description">实际上对于语义偏离还是持悲观看法</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="01-关于起因"><a href="#01-关于起因" class="headerlink" title="01 关于起因"></a>01 关于起因</h1><p>实际上偶然想到这一话题，是在早上的时候，看到一个毕业论文答辩的二创视频。</p>
+<p>很生动形象，毕竟快到毕业季，各大学子的论文答辩也是属于每年学生群体都会自我调侃的话题。</p>
+<p>但是其中视频的一条弹幕让我笑不出来</p>
+<blockquote>
+<p>“答辩”这两个字如今我无法直视</p>
+</blockquote>
+<p>被这么一说，我也审视了下我自己</p>
+<p>确实在刚开始看到视频文本中出现率最多的“答辩”一词，内心也有一种暗戳戳想歪的念头。</p>
+<h1 id="02-关于源头"><a href="#02-关于源头" class="headerlink" title="02 关于源头"></a>02 关于源头</h1><p>这时候我也纳闷，这一个原本只会在大学学生或者研究生口中存在的的名词，在什么时候脱离了原本的学术性意思？</p>
+<p>搜了搜一些梗科普的介绍，结合自己的个人体验，似乎这一词义的变化开始大量传播是出现在吴京的替身演员孙国帅拍摄的<del>短剧</del>尬剧，由于视频内容正能量但又过于尴尬，后被网友评价为“一坨大便”；</p>
+<p>而后又由于词语的本意的污秽性，网友则将该词转化为谐音词，表达也变为“依托答辩”。</p>
+<p>这一转化其实也挺有趣的，事实上大部分人都会觉得原意的字词本来就是挺难听的，但又想表达自己内心不吐不快的贬低意思，则是以其谐音字词来进行表达。</p>
+<h1 id="03-一些思考"><a href="#03-一些思考" class="headerlink" title="03 一些思考"></a>03 一些思考</h1><p>细数近些年来的类似现象，实际上也有挺多的，但让我印象最深的则是“伞兵”一词。</p>
+<p>原来也只是代表着士兵的一种兵种，只是同样的为了表达本意“傻x”，则同样的取类似的谐音词来进行宣泄，”伞兵“一词也被这么带上了不属于它原音的贬低色彩。</p>
+<p><em>小小出题一下，这一词的偏离也有点吃瓜吃到自己家。自己是守望先锋玩家，也会看暴雪举办的守望先锋联赛；该词的守望圈子的广泛流传记得是从某一场比赛中，韩国一支队伍输出位置的选手在比赛中击杀一支中国队伍的辅助位后，在游戏内进行蹲起动作（表示嘲讽之意），而韩国队伍在该比赛中战败；OB 镜头在中国队伍赢得胜利后切换到基地比赛现场，开着实时语音，辅助选手在胜利一刻庆祝时脱口一句“这个人还在嘲讽我跟个傻x”一样。（直播组背大锅）结合先前韩国队伍选手针对中国队伍的不当言论，导致守望先锋圈的观众都会用”伞兵“一词代指该名韩国选手及该韩国队伍。</em></p>
+<p>而后互联网基本上将该词运用在骂人的语言情境下，甚至央视网青年、新华社等官方媒体联合发声，呼吁停止该词的污名化，配合各大媒体的集中治理，该词的污名化应用才被遏止。</p>
+<p>其实很难界定词语的污名化应用过错在哪。不同主体的理由都是带着迫不得已的色彩。</p>
+<p>骂人，一个人多多少少都会不由自主的对外界宣泄自己的不满之意。</p>
+<p>而在如今的文明社会，似乎再回到以前那种粗俗、直白的脏话，又显得不合时宜，加上如今互联网平台越来越严格的屏蔽机制。</p>
+<p>想骂，又不能直接骂，不骂又憋得难受，怎么办？这时候一些谐音字词则可能就被大众的宣泄需求下“中枪”，成为脏话的代名词。</p>
+<hr>
+<p>作为一个汉语言文学的人，对于文字方面可能敏感性更高一点，词语所附带的褒贬色彩对于人的直观感受是十分明显的。</p>
+<p>从小阅读的文学作品，让我自己对于某一些字词有一种天生的色彩判断。</p>
+<p>例如“春”，则会联想到朱自清写的《春》，小学语文课本上那一片青葱风景的插图，脑里第一时间浮现的也是雨下一片绿色草原的景象；</p>
+<p>例如“奸”，则会想到中国历史上无数的负面人物，如同奸臣赵高，秦侩；又如同京剧色彩中曹操的白脸面谱，象征着满腹奸诈，让人不由自主的厌恶该字。</p>
+<p>每个字词，在中文语境下，有着自己带有的褒义和贬义色彩，也有着中义的情况，而这些词语附带的感情色彩，也是有着五千年的中华文化作为背景。</p>
+<p>只是在现在无限膨胀的互联网环境下，一切变得太快，无论是形势，还是语言，都不可避免的卷进这场旋涡中。</p>
+<p>语义则是其中的一个缩影，无论是前文提到的“答辩”、“伞兵”，后续还有”栓Q”“鸡你太美”<del><em>（不好意思说这词我自己有点想笑）</em></del>等词汇，有一些是对于宣泄出口的另一种隐形选择，也有一些蕴含着普通人对于一些潮流的反叛精神。</p>
+<p>当然，一昧秉持着批评态度又不给出相对应的解决方法，只是一个愤青的做法罢了，所以此现象也不会随便的就否定批判，一种现象存在也有着无法避免的原因。</p>
+<p>但是让我皱眉头的是，少年群体如今是与互联网全面拥抱，而这些语义偏离的现象，小孩子又会是直接受众，连成年人都会不由自主的产生的偏离后的想法，</p>
+<p>那小孩子对于该词的本义和偏离的含义的区别，很难不让人担心其理解上的偏差。</p>
+<p>可能导致的结果是从小就被带歪了的语义偏见带来的歧视，个人还是感觉带来的负面效果远远多于想象。</p>
+<h1 id="04-关于未来的想法"><a href="#04-关于未来的想法" class="headerlink" title="04 关于未来的想法"></a>04 关于未来的想法</h1><p>除了上文所提到的对于少年学生群体的文化影响之外，结合近些年大火的Chat GPT，可能也有所影响。</p>
+<p>Open AI 如今的版本已经到达4代，且背后的研发进程可能早已领先。</p>
+<p>而我们自己的人工智能模型相比较可能也算是小巫见大巫，当然如今各大方也在奋力赶超，无论是百度的“文心一言”，或者清华ChatGLM，虽然肯定是比不上Chat GPT的水平，但仍是需要发展的。</p>
+<p>而关于人工智能，其中很重要的是数据的来源。Chat GPT 之所以能力强大，原因之一是该模型吸收了互联网上海量的数据，</p>
+<p>相当于人类事先喂了它很多的文献记载，等到询问的时候，能以极快的速度调取相关答案，并帮人类整理出详细，准确率高的答案，相当于帮人类从繁杂的无效信息中检索，筛选出最有效的答案。</p>
+<p>而数据，一个是数量，一个是质量。</p>
+<p>但可能在我们内部互联网中两者优势都可能不那么占优。</p>
+<p>数量方面，虽然互联网如今人人都在使用，但基本上几家平台内部分割，数据不流通，相当于自家拼尽全力只想把用户数据和内容封锁在自家平台内，</p>
+<p>原意是想让外界的人访问的话，不得不使用该平台才能阅读访问；后果则是数据被各大平台瓜分，又无法达成共享的目的。这也是国内几大人工智能模型发展的受限因素之一。</p>
+<p>质量方面，发展近十年，内容质量好坏有目共睹。以前许多优质内容的博客，论坛等，发展到现在要不直接闭站，要不就半死不活。</p>
+<p>更多的内容创造更多是无关痛痒的娱乐消息，或者喧嚣对骂，在信息的有效性上愈发难过。</p>
+<p>语义的偏离，多少也裹挟在其中。</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+    </div>
+
+    
+    
+    
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/uploads/wechat.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%96%87%E7%AB%A0/" rel="tag"># 文章</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/03/25/%E3%80%8A%E5%85%B3%E4%BA%8E%E7%BA%A0%E6%AD%A3%E5%85%9A%E5%86%85%E7%9A%84%E9%94%99%E8%AF%AF%E6%80%9D%E6%83%B3%E3%80%8B%E6%A1%86%E6%9E%B6%E7%AC%94%E8%AE%B0/" rel="prev" title="《关于纠正党内的错误思想》框架笔记">
+      <i class="fa fa-chevron-left"></i> 《关于纠正党内的错误思想》框架笔记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/04/09/%E8%B0%88%E8%B0%88%E8%BF%91%E5%87%A0%E5%B9%B4%E7%9A%84%E4%BB%B7%E5%80%BC%E5%88%A4%E6%96%AD/" rel="next" title="谈谈近几年的价值判断">
+      谈谈近几年的价值判断 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#01-%E5%85%B3%E4%BA%8E%E8%B5%B7%E5%9B%A0"><span class="nav-number">1.</span> <span class="nav-text">01 关于起因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#02-%E5%85%B3%E4%BA%8E%E6%BA%90%E5%A4%B4"><span class="nav-number">2.</span> <span class="nav-text">02 关于源头</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#03-%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">03 一些思考</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#04-%E5%85%B3%E4%BA%8E%E6%9C%AA%E6%9D%A5%E7%9A%84%E6%83%B3%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">04 关于未来的想法</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="是羽毛ya"
+      src="/uploads/zhaoyu.png">
+  <p class="site-author-name" itemprop="name">是羽毛ya</p>
+  <div class="site-description" itemprop="description">想记录着世界的过客</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="/ZakiShe@outlook.com" title="E-Mail → ZakiShe@outlook.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">是羽毛ya</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共26.1k字</span>
+  <span class="post-meta-divider">|</span>
+  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  <span class="post-meta-divider">|</span>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+  <span class="post-meta-divider">|</span>
+  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300,"hOffset":0,"vOffset":-20},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
