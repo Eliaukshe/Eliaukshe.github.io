@@ -62,7 +62,7 @@
 <p>毕竟无论是去年的评估行业，还是今年的教育行业，对我而言都是新的尝试。</p>
 <p>印象还很深的是去年的八月或是九月份，那时候还在一家评估公司的试用期阶段，组长韬哥有和我打打心里预防针，</p>
 <p>大概内容就是如果投入这一行的话，轻松肯定没办法轻松，都要时时刻刻保持大脑的运行，学习的东西会非常多，且是跨度领域很大的内容；</p>
-<p>当然那时候我的虽然不会因此打退堂鼓 <em>（主要是工作这东西真打退堂鼓就没了）</em>，但多少还是有点小小吐槽的：</p>
+<p>当然那时候的我虽然不会因此打退堂鼓 <em>（主要是工作这东西真打退堂鼓就没了）</em>，但多少还是有点小小吐槽的：</p>
 <blockquote>
 <p>都读了二十多年书了，咋毕业后还要继续高强度动脑。</p>
 </blockquote>
@@ -718,12 +718,12 @@
 <script src="/dist/APlayer.min.js"></script>
 
 
-        <div id="aplayer-YCBJhdSs" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-nMJSdRMx" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-YCBJhdSs"),
+            element: document.getElementById("aplayer-nMJSdRMx"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1236,12 +1236,12 @@
 <script src="/dist/APlayer.min.js"></script>
 
 
-        <div id="aplayer-vdpNYTzL" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-ZQbtjawq" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-vdpNYTzL"),
+            element: document.getElementById("aplayer-ZQbtjawq"),
             narrow: false,
             autoplay: false,
             showlrc: false,
