@@ -1772,12 +1772,12 @@
 <script src="/dist/APlayer.min.js"></script>
 
 
-        <div id="aplayer-uloEbiSb" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-yLWxQKuC" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-uloEbiSb"),
+            element: document.getElementById("aplayer-yLWxQKuC"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -2290,12 +2290,12 @@
 <script src="/dist/APlayer.min.js"></script>
 
 
-        <div id="aplayer-oapZFDop" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-bRpZPYtR" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-oapZFDop"),
+            element: document.getElementById("aplayer-bRpZPYtR"),
             narrow: false,
             autoplay: false,
             showlrc: false,
